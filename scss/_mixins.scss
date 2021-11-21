@@ -1,0 +1,18 @@
+/*TYPOGRAPHY*/
+@mixin font-title ($size, $color) {
+    font-family: 'Poppins', sans-serif;
+    font-size: $size;
+    color: $color;
+}
+
+@mixin font-text ($size, $color) {
+    font-family: 'Roboto', sans-serif;
+    font-size: $size;
+    color: $color;
+}
+
+/*IMAGES*/
+@mixin bg-img ($position) {
+    background-repeat: no-repeat;
+    background-position: $position;
+}

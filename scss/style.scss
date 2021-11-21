@@ -1,0 +1,524 @@
+@import 'color';
+@import 'header';
+@import 'media-queries';
+@import 'animations';
+@import 'typography';
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+// GENERAL
+html {
+    scroll-behavior: smooth;
+    margin: 0 80px;
+    background-color: $bg_light;
+}
+
+.main-header {
+    padding-left: 0;
+}
+
+// FOOTER
+.footer {
+    margin: 40px auto;
+    border-top: solid 0.8px $grey_500;
+    padding-top: 24px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    h6 {
+        padding-top: 8px;
+        a {
+            text-decoration: none;
+        }
+    }
+
+    ul {
+        display: flex;
+        justify-content: center;
+        li {
+            padding: 0px 24px;
+            list-style: none;
+            a {
+                text-decoration: none;
+                img {
+                    height: 24px;
+                }
+            }
+            
+        }
+    }
+}
+
+// INDEX
+.index-first {
+    padding-top: 80px;
+    display: flex;
+    flex-direction: row;
+    background-image: url(/img/home/home-vector-1.svg);
+    @include bg-img (right bottom);
+    background-size: 88vh;
+    
+    &__text {
+        padding-top: 64px;
+        h3 {
+            padding-top: 48px;
+        }
+    }
+    
+    &__img {
+        padding-left: 80px;
+    }
+}
+
+.index-second {
+    margin-top: -48px;
+    display: flex;
+    flex-direction: row;
+
+    &__card {
+        margin: 16px;
+        padding: 24px 32px;
+        background-color: #fff;
+        border-radius: 20px;
+        box-shadow: 2px 2px 10px #dadada;
+        text-align: center;
+
+        img { // Icons
+            height: 2.2rem;
+        }
+
+        h4 {
+            padding: 16px;
+        }
+    }
+}
+
+// PORTFOLIO
+.portfolio-first {
+    padding-top: 80px;
+}
+
+.portfolio-second {
+    padding: 40px 0;
+    display: flex;
+
+    &__text {
+        padding-left: 40px;
+        h2 {
+            color: $color_300;
+            font-size: 2.2rem;
+        }
+        h4 {
+            padding-top: 32px;
+            text-transform: uppercase;
+            color: $grey_500;
+        }
+        h5 {
+            font-weight: lighter;
+            padding-top: 8px;
+        }
+        p {
+            padding-top: 8px;
+        }
+        a {
+            text-decoration: none;
+            p {
+                font-size: 1.1rem;
+                padding-top: 16px;
+                color: $color_400;
+                font-weight: bold;
+            }
+        }
+    }
+}
+
+// WORKING EXPERIENCE
+.experience-first {
+    padding-top: 80px;
+}
+    
+.experience-second {
+    
+    &__timeLine {
+        text-align: center;
+        padding-top: 32px;
+        padding-right: 120px;
+    }
+    
+    &__card {
+        display: flex;
+        margin: 16px 24px;
+
+        &-1 {
+            padding: 16px;
+        }
+        &-2 {
+            padding: 16px;
+        }
+        &-3 {
+            padding: 16px 0 0 16px;
+        }
+    
+        h5 {
+            padding-top: 8px;
+        }
+        p {
+            padding-top: 16px;
+            strong {
+                color: $color_400;
+            }
+        }
+    }
+}
+
+// EDUCATION
+.education-first {
+    padding-top: 80px;
+}
+    
+.education-second {
+    margin-bottom: 120px;
+    
+    &__timeLine {
+        text-align: center;
+        padding-top: 32px;
+        padding-right: 120px;
+    }
+    
+    &__card {
+        display: flex;
+        justify-content: space-between;
+        margin: 16px 32px;
+    
+        h5 {
+            padding-top: 8px;
+        }
+        p {
+            padding-top: 16px;
+            strong {
+                color: $color_400;
+            }
+        }
+    }
+}
+
+// CONTACT
+.contact-first {
+    padding-top: 80px;
+}
+
+.contact-second {
+    display: flex;
+    h4 {
+        padding: 40px 0px 24px 0px;
+    }
+
+    &__info {
+
+        a {
+            text-decoration: none;
+            ul {
+                list-style: none;
+                display: flex;
+                p {
+                    padding-left: 16px;
+                }
+                img {
+                    height: 24px;
+                }
+            }
+        }
+    }
+
+    &__form {
+        padding-left: 180px;
+        @include font-text (1rem, $grey_400);
+
+        &-fields {
+            padding-bottom: 24px;
+
+            .name, .email {
+                input {
+                    width: 100%;
+                }
+            }
+
+            .services {
+                input {
+                    width: 50%;
+                }
+            }
+
+            label {
+                @include font-text (1rem, $grey_400);
+                line-height: 1.8;
+            }
+            input {
+                border: none;
+                border-bottom: solid 0.8px $grey_300;
+                @include font-text (1rem, $grey_300);
+                font-weight: lighter;
+                line-height: 2;
+            }
+            select {
+                @extend input;
+            }
+        }
+
+        .button { // SEND BUTTON
+            input {
+                width: 200px;
+                height: 42px;
+                border-radius: 20px;
+                background: #C7C7C7;
+                color: $grey_300;
+                font-weight: bold;
+                border-bottom: none;
+            }
+        }
+    }
+}
+
+// TABLET
+@media screen and (max-width: 770px) {
+    html {
+        margin: 16px 24px;
+        width: 90%;
+    }
+
+    // INDEX
+    .main-index {
+        background-image: url(/img/home/home-vector-1.svg);
+        @include bg-img (right center);
+        background-size: 40vh;
+
+        .index-first {
+            padding-top: 88px;
+            background-image: none;
+            
+            &__text {
+                padding-top: 24px;
+                h1 {
+                    padding-top: 16px;
+                    text-align: left;
+                }
+                h3 {
+                    padding-top: 32px;
+                    width: 70%;
+                }
+            }
+            
+            &__img {
+                height: 280px;
+                padding-left: 0px;
+                text-align: right;
+            }
+        }
+    
+        .index-second {
+            margin-top: 180px;
+
+            &__card {
+                width: 14rem;
+                margin: 8px;
+                padding: 16px 24px;
+        
+                img { // Icons
+                    height: 2rem;
+                }
+        
+                h4 {
+                    padding: 8px;
+                }
+            }
+        }
+    }
+
+    // PORTFOLIO
+    .portfolio-second {
+        padding: 40px 0;
+        flex-direction: column-reverse;
+        align-items: center;
+
+        &__img {
+            img {
+                padding-top: 32px;
+                width: 100%;
+            }
+        }
+    
+        &__text {
+            padding: 0px 52px;
+            align-content: center;
+        }
+    }
+
+    // EXPERIENCE
+    .experience-second {
+        &__timeLine {
+            display: none;
+        }
+        
+        &__card {
+            flex-direction: column-reverse;
+            margin: 64px;
+    
+            &-1, &-2, &-3 {
+                padding: 24px 0px;
+            }
+        
+            h5 {
+                padding-top: 8px;
+            }
+            p {
+                font-size: 1.13rem;
+                line-height: 1.2;
+            }
+        }
+    }
+
+    // EDUCATION
+    .education-second {
+        &__timeLine {
+            display: none;
+        }
+        
+        &__card {
+            flex-direction: column-reverse;
+            margin: 64px;
+    
+            &-1, &-2, &-3 {
+                padding: 24px 0px;
+            }
+        
+            h5 {
+                padding-top: 8px;
+            }
+            p {
+                font-size: 1.13rem;
+                line-height: 1.2;
+            }
+        }
+    }
+
+    // CONTACT
+    .contact-second {
+        flex-direction: column;
+        align-items: right;
+        padding: 32px 88px;
+
+        &__form {
+            padding-left: 0px;
+            width: 90%;
+        }
+    }
+}
+
+// MOBILE
+@media screen and (max-width: 420px) {
+    .logo {
+        img {
+            height: 20px;
+        }
+    }
+    // INDEX
+    .main-index {
+        background-image: none;
+
+        .index-first {
+            padding-top: 64px;
+            flex-direction: column;
+            
+            &__text {
+                padding-top: 24px;
+                h1 {
+                    padding-top: 0px;
+                }
+                h3 {
+                    padding-top: 16px;
+                    width: 100%;
+                }
+            }
+            
+            &__img {
+                padding-top: 16px;
+                height: 180px;
+                text-align: center;
+            }
+        }
+    
+        .index-second {
+            margin-top: 180px;
+            flex-direction: column;
+            align-items: center;
+
+            &__card {
+                width: 90%;
+                margin: 8px;
+            }
+        }
+    }
+
+    // PORTFOLIO
+    .portfolio-second {
+        padding-bottom: 0px;
+
+        &__img {
+            img {
+                padding-top: 40px;
+            }
+        }
+    
+        &__text {
+            padding: 0px 8px;
+            align-content: center;
+        }
+    }
+
+    // EXPERIENCE
+    .experience-second {
+        &__card {
+            margin: 8px;
+    
+            &-1, &-2, &-3 {
+                padding: 16px 0px;
+            }
+        }
+    }
+
+    // EDUCATION
+    .education-second {
+        &__card {
+            margin: 8px;
+    
+            &-1, &-2, &-3 {
+                padding: 16px 0px;
+            }
+        }
+    }
+
+    // CONTACT
+    .contact-second {
+        padding: 16px;
+
+        &__form {
+            padding-left: 0px;
+            width: 100%;
+        }
+    }
+
+    // FOOTER
+    .footer {
+        flex-direction: column-reverse;
+        align-items: center;
+
+        h6 {
+            text-align: center;
+        }
+    }
+}

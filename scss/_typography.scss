@@ -1,0 +1,76 @@
+@import 'mixins';
+@import 'color';
+
+h1 {
+    @include font-title (4rem, $color_400);
+    text-align: center;
+}
+h2 { // Hello!
+    @include font-text (3rem, $grey_500);
+}
+h3 {
+    @include font-text (1.8rem, $grey_500);
+    font-weight: lighter;
+}
+h4 {
+    @include font-text (1.4rem, $color_600);
+}
+h5 {
+    @include font-text (1rem, $grey_300);
+}
+h6 {
+    @include font-text (0.8rem, $grey_400);
+    font-weight: lighter;
+}
+p {
+    @include font-text (1rem, $grey_400);
+    line-height: 1.4;
+}
+
+@media screen and (max-width: 770px) {
+    h1 {
+        @include font-title (2.5rem, $color_400);
+        line-height: 1;
+    }
+    h2 {
+        @include font-text (2.8rem, $grey_500);
+    }
+    h3 {
+        @include font-text (1.25rem, $grey_500);
+        font-weight: lighter;
+    }
+    h4 {
+        @include font-text (1.13rem, $color_600);
+    }
+    h5 {
+        @include font-text (1.13rem, $grey_300);
+    }
+    p {
+        @include font-text (0.9rem, $grey_400);
+        line-height: 1;
+    }
+}
+
+@media screen and (max-width: 420px) {
+    h1 {
+        @include font-title (2rem, $color_400);
+    }
+    h2 { // Hello!
+        @include font-text (1.5rem, $grey_500);
+    }
+    h3 {
+        @include font-text (1rem, $grey_500);
+        font-weight: lighter;
+    }
+    h4 {
+        @include font-text (1.13rem, $color_600);
+    }
+    h6 {
+        @include font-text (0.75rem, $grey_400);
+        font-weight: lighter;
+        line-height: 1.5;
+    }
+    p {
+        line-height: 1.3;
+    }
+}
