@@ -59,7 +59,7 @@ html {
     padding-top: 80px;
     display: flex;
     flex-direction: row;
-    background-image: url(/img/home/home-vector-1.svg);
+    background-image: url(../img/home/home-vector-1.svg);
     @include bg-img (right bottom);
     background-size: 88vh;
     
@@ -293,7 +293,7 @@ html {
 
     // INDEX
     .main-index {
-        background-image: url(/img/home/home-vector-1.svg);
+        background-image: url(../img/home/home-vector-1.svg);
         @include bg-img (right center);
         background-size: 40vh;
 

@@ -704,7 +704,7 @@ html {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  background-image: url(/img/home/home-vector-1.svg);
+  background-image: url(../img/home/home-vector-1.svg);
   background-repeat: no-repeat;
   background-position: right bottom;
   background-size: 88vh;
@@ -959,7 +959,7 @@ html {
     width: 90%;
   }
   .main-index {
-    background-image: url(/img/home/home-vector-1.svg);
+    background-image: url(../img/home/home-vector-1.svg);
     background-repeat: no-repeat;
     background-position: right center;
     background-size: 40vh;
